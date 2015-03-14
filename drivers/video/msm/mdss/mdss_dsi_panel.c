@@ -495,14 +495,14 @@ static int mdss_dsi_panel_on(struct mdss_panel_data *pdata)
 		mdss_dsi_panel_cmds_send(ctrl, &ctrl->on_cmds);
 #else
 	// disable panel on lcd when booting up
-	if(unlikely(first_time)&&pdata->panel_info.cont_splash_enabled)
+/*	if(unlikely(first_time)&&pdata->panel_info.cont_splash_enabled)
 	{
 		first_time = false;
 		if (ctrl->display_on_cmd.cmd_cnt)
 			mdss_dsi_panel_cmds_send(ctrl, &ctrl->display_on_cmd);
 		LCD_LOG_INFO("%s: continuous splash, so dont download on_cmds when booting up\n", __func__);
 #ifdef CONFIG_HUAWEI_LCD
-		//Used to determine whether LCD support ESD function , 1:enable , 0:disbale*/
+		//Used to determine whether LCD support ESD function , 1:enable , 0:disbale
 		if(ctrl->esd_check_enable)
 		{
 			//esd_bta_flag is 1 , enable read register in the esd check function
@@ -510,7 +510,7 @@ static int mdss_dsi_panel_on(struct mdss_panel_data *pdata)
 		}
 #endif
 		return 0;
-	}
+	}*/
 
 	memset(&debug_cmds, sizeof(debug_cmds), 0);
 	/*check if file is opened successfully load the init code*/
