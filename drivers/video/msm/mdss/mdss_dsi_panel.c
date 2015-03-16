@@ -475,7 +475,7 @@ static int mdss_dsi_panel_on(struct mdss_panel_data *pdata)
 	struct mipi_panel_info *mipi;
 	struct mdss_dsi_ctrl_pdata *ctrl = NULL;
 #ifdef CONFIG_HUAWEI_LCD
-	static unsigned char first_time=true;
+	//static unsigned char first_time=true;
 	struct dsi_panel_cmds debug_cmds;
 #endif	
 	if (pdata == NULL) {
